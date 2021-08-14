@@ -66,14 +66,14 @@ const hasStatusAndPriorityProperty = (requestQuery) => {
   );
 };
 
-const givenDate = new Date(2021, 02, 22);
-const dueDate = format(givenDate, "yyyy-MM-dd");
-
 const hasDueDateAndPriorityProperty = (requestQuery) => {
   return (
     requestQuery.dueDate !== undefined && requestQuery.priority !== undefined
   );
 };
+
+const givenDate = new Date(2021, 02, 22);
+const dueDate = format(givenDate, "yyyy-MM-dd");
 
 app.get("/todos/", async (request, response) => {
   try {

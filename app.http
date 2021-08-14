@@ -6,50 +6,60 @@ Content-Type:text/html
 ###
 GET http://localhost:3000/todos/?status=TO%20DO
 Content-Type:application/json
+//correct response
 
 
 
 ###
 GET http://localhost:3000/todos/?priority=HIGH
 Content-Type: application/json
+//correct response
 
 ###
 GET http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRESS
 Content-Type:application/json
+//wrong response
 
 
 ###
 GET http://localhost:3000/todos/?search_q=Buy
 Content-Type: application/json
+//correct response
 
 
 ###
 GET http://localhost:3000/todos/?category=WORK&status=DONE
 Content-Type: application/json
+//wrong response
 
 ###
 GET http://localhost:3000/todos/?category=HOME
 Content-Type:application/json
+//correct response
 
 ###
 GET http://localhost:3000/todos/?category=LEARNING&priority=HIGH
 Content-Type:application/json
+//correct response
 
 
 ###
 GET http://localhost:3000/todos/4/
 Content-Type:application/json
+//correct response
 
 
 ###
 GET http://localhost:3000/todos/agenda/?date=2021-02-22
 Content-Type:application/json
+//no response
 
 
 
 ###
 POST http://localhost:3000/todos/
 Content-Type: application/json
+//correct response
 
 {
   "id": 6,
@@ -63,6 +73,7 @@ Content-Type: application/json
 ###
 PUT http://localhost:3000/todos/4/
 Content-Type:application/json
+//correct response
 
 {
     "status":"Done"
@@ -72,6 +83,7 @@ Content-Type:application/json
 ###
 PUT http://localhost:3000/todos/3/
 Content-Type:application/json
+//correct response
 
 {
     "priority":"HIGH"
@@ -80,6 +92,7 @@ Content-Type:application/json
 ###
 PUT http://localhost:3000/todos/6/
 Content-Type:application/json
+//correct response
 
 {
     "todo":"Clean the garden"
@@ -88,6 +101,7 @@ Content-Type:application/json
 ###
 PUT http://localhost:3000/todos/3/
 Content-Type:application/json
+//correct response
 
 {
     "category":"LEARNING"
@@ -97,6 +111,7 @@ Content-Type:application/json
 ###
 PUT http://localhost:3000/todos/3/
 Content-Type:application/json
+//correct response
 
 {
       "dueDate": "2021-01-12"
@@ -104,4 +119,5 @@ Content-Type:application/json
 
 ###
 DELETE http://localhost:3000/todos/2/
+//correct response
 
