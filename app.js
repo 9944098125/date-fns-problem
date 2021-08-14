@@ -66,7 +66,8 @@ const hasStatusAndPriorityProperty = (requestQuery) => {
   );
 };
 
-const dueDate = format(new Date(2021, 02, 22), "yyyy-MM-dd");
+const givenDate = new Date(2021, 02, 22);
+const dueDate = format(givenDate, "yyyy-MM-dd");
 
 const hasDueDateAndPriorityProperty = (requestQuery) => {
   return (
